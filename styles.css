@@ -53,6 +53,8 @@ h3 { font-size: 1.25rem; }
 .cta-band .shell { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .cta-band p { color: #c0d6dd; max-width: 560px; margin-bottom: 0; }
 .page-hero { color: var(--white); background: linear-gradient(135deg, #084b61, #063045); padding: 92px 0 72px; }
+.game-hero { min-height: 500px; display: grid; align-items: end; background: url('mini-chess-puzzle-hero.png') center / cover no-repeat; }
+.game-hero .shell { display: none; }
 .page-hero p { max-width: 680px; color: #cfebed; font-size: 1.15rem; }
 .content { width: min(800px, calc(100% - 40px)); margin: 0 auto; padding: 66px 0 82px; }
 .content h2 { font-size: 1.7rem; margin: 42px 0 12px; }
@@ -74,6 +76,7 @@ h3 { font-size: 1.25rem; }
   .nav { padding: 12px 0; align-items: start; }
   .nav-links { justify-content: flex-end; gap: 10px 15px; }
   .hero { min-height: 570px; background-position: 62% center; }
+  .game-hero { min-height: 0; aspect-ratio: 2.048 / 1; background-size: contain; background-color: #060201; }
   .hero-content { padding: 70px 0 58px; }
   .button.secondary { margin: 12px 0 0; }
   .section { padding: 58px 0; }
