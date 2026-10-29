@@ -1,17 +1,1 @@
-const filters = document.querySelectorAll('[data-filter]');
-const products = document.querySelectorAll('[data-category]');
-const count = document.querySelector('.catalog-count');
-filters.forEach(button => button.addEventListener('click', () => {
-  const category = button.dataset.filter;
-  filters.forEach(item => {
-    const selected = item === button;
-    item.classList.toggle('active', selected);
-    item.setAttribute('aria-pressed', String(selected));
-  });
-  let visible = 0;
-  products.forEach(product => {
-    product.hidden = category !== 'all' && product.dataset.category !== category;
-    if (!product.hidden) visible++;
-  });
-  count.textContent = `${visible} ${visible === 1 ? 'app' : 'apps'} to discover`;
-}));
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button))});let count=0;document.querySelectorAll('[data-category]').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&button.dataset.filter!==card.dataset.category;if(!card.hidden)count++});document.querySelector('#count').textContent=count+' '+(count===1?'app':'apps')}));

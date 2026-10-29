@@ -1,17 +1,24 @@
 # Khoai Store website
 
-This is a static website ready for GitHub Pages. It uses only HTML, CSS, and the supplied Khoai Store image assets.
+Static HTML, CSS, and JavaScript storefront for creative tools and games. Deploy from the repository root with GitHub Pages.
 
-## Before publishing
+## Pages
 
-Review `privacy-policy.html` against the live app configuration and the Google Play **Data safety** form. Update it if any data use, SDK, advertising, purchase, or cloud-save feature changes.
+- `index.html`: app collection and upcoming concepts.
+- `apps/ar-drawing.html`: AR Drawing product details, interactive lesson preview, topic filters, and collection illustration.
+- `apps/mini-chess-puzzle.html`: Mini Chess Puzzle.
+- `support.html`: contact and FAQ.
+- `privacy.html`: directory of app-specific policies.
+- `privacy-policy.html`: existing policy URL retained for compatibility.
 
-## Publish with GitHub Pages
+Shared styling is in `store.css`; app filtering is in `store.js`. Drawing-specific interactions are in `drawing-studio.js`. App assets are in `assets/`, with lesson and template examples in `assets/studio/`. The site keeps the original Khoai Store logo.
 
-1. Create a new GitHub repository and upload the full contents of this folder, including the `apps` folder and image files.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**, then choose `main` and `/ (root)`.
-4. Wait for GitHub to show the HTTPS site address, then open it to verify the pages and images.
-5. Paste the homepage address into **Developer website** in Google Play Console. Use the HTTPS address of `privacy-policy.html` for the app privacy-policy URL.
+Lesson steps, topic filters and collection tabs run locally in the browser. Collection content is illustrative and does not upload or store personal drawings. Draw Music is an unreleased concept without a download CTA.
 
-If this repository is named `khoai-store.github.io`, the homepage will normally be `https://khoai-store.github.io/`. Otherwise it will normally be `https://<github-user>.github.io/<repository-name>/`.
+## Before changing privacy content
+
+Read `docs/privacy-review.md`. Compare each app policy against its live configuration and Google Play Data safety declaration. Design review does not validate the existing game policy's SDK claims.
+
+## GitHub Pages
+
+Publish branch `main`, folder `/ (root)`. Keep relative URLs so root and project sites both work. Use `privacy.html` for the policy directory and preserve `privacy-policy.html` for existing links.
